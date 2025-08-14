@@ -1,16 +1,12 @@
 cmake_minimum_required(VERSION 3.28)
+project(cpp-gen)
 
-set(CMAKE_TOOLCHAIN_FILE /home/marcel/extern/vcpkg/scripts/buildsystems/vcpkg.cmake)
+include_directories(include)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-project(proj)
-
-include_directories(include)
-
-add_subdirectory(lib)
-
-file(GLOB SOURCES src/*.cpp)
+file(GLOB SOURCES src/*.cpp*)
 add_executable(${PROJECT_NAME} ${SOURCES})
+
 
